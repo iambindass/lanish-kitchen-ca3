@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>What to Cook Today</title>
+</head>
+<body>
+    <header>
+        <div class="brief">
+            <h1>Lanish Kitchen</h1>
+            <p>"Welcome to Lanish Kitchen – Where Good Times and Great Tastes Collide! Join us on a <br>Culinary Adventure, Where Every Dish is a Celebration of Flavor and Fun."
+            </p>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="What To Eat???">
+            <button onclick="searchMeal()">Search</button>
+        </div>
+    </header>
+
+    <section id="randomMealSection">
+        <h2>Random Meal:</h2>
+        <div id="randomMeal" onclick="showIngredientsModal()"></div>
+    </section>
+
+    <section id="searchedMealSection">
+        <h2>Search Results:</h2>
+        <div id="searchedMeals"></div>
+    </section>
+
+    <!-- Ingredients Modal -->
+    <div id="ingredientsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Ingredients</h2>
+            <ul id="ingredientsList"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
